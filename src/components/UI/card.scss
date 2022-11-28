@@ -1,0 +1,26 @@
+.card {
+    border-radius: 12px;
+    background-color: rgb(250, 230, 200);
+    border: 2px solid;
+    border-color: orange;
+    padding: 15px;
+    width: 180px;
+    height: 200px;
+    text-align: center;
+    justify-content: center;
+    &:hover {
+        box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
+        background-color: rgb(255, 235, 200);
+        cursor: pointer;
+    }
+    img {
+        max-width: 150px;
+        max-height: 120px;
+    }
+    p {
+        color: black;
+        margin: 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}

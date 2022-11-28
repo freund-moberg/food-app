@@ -1,0 +1,14 @@
+.store {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 25px;
+}

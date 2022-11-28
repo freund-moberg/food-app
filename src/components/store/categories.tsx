@@ -1,30 +1,43 @@
 import "./store.scss";
 import Card from "../UI/card";
 import Image from "../UI/image";
+import { useDispatch } from "react-redux";
+import selectCategory from "../../redux/category";
 
 const Categories = () => {
-  const categoryList = [
-    { name: "Burgers", image: "royale-burger.png" },
-    { name: "Salads", image: "chicken-salad.png" },
-    { name: "Pizza", image: "italian-pizza.png" },
-    { name: "Drinks", image: "coca-cola.png" },
-  ];
+    const dispatch = useDispatch();
 
-  return (
-    <div>
-      <h3>Categories</h3>
-      <div className="categories">
-        {categoryList.map((category) => {
-          return (
-            <Card>
-              <Image filename={category.image} />
-              <p>{category.name}</p>
-            </Card>
-          );
-        })}
-      </div>
-    </div>
-  );
+    const categoryList = [
+        { name: "Burgers", image: "royale-burger.png" },
+        { name: "Salads", image: "chicken-salad.png" },
+        { name: "Pizza", image: "italian-pizza.png" },
+        { name: "Drinks", image: "coca-cola.png" },
+    ];
+
+    const clickHandler = (categoryName: string) => {
+        console.log(categoryName); //category.name
+        //dispatch(selectCategory({ selectedCategory: "aaa" }));
+    };
+
+    return (
+        <div>
+            <h3>Categories</h3>
+            <div className="categories">
+                {categoryList.map((category) => {
+                    return (
+                        <Card
+                            onClick={() => clickHandler(category.name)}
+                            className="category"
+                            key={category.name}
+                        >
+                            <Image filename={category.image} />
+                            <p>{category.name}</p>
+                        </Card>
+                    );
+                })}
+            </div>
+        </div>
+    );
 };
 
 export default Categories;

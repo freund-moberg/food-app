@@ -4,12 +4,12 @@ import MenuBar from "./components/menuBar/menuBar";
 import Store from "./components/store/store";
 
 function App() {
-  return (
-    <div className="App">
-      <MenuBar></MenuBar>
-      <Store></Store>
-    </div>
-  );
+    return (
+        <div className="App">
+            <MenuBar />
+            <Store />
+        </div>
+    );
 }
 
 export default App;

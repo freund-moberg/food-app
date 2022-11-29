@@ -1,37 +1,50 @@
 import "./store.scss";
 import Card from "../UI/card";
 import Image from "../UI/image";
-import { useDispatch } from "react-redux";
-import selectCategory from "../../redux/category";
+import { useSelector, useDispatch } from "react-redux";
+import { selectCategory } from "../../redux/category";
+import { Category } from "../../common/types";
+import { RootState } from "../../index";
 
 const Categories = () => {
     const dispatch = useDispatch();
 
     const categoryList = [
-        { name: "Burgers", image: "royale-burger.png" },
-        { name: "Salads", image: "chicken-salad.png" },
-        { name: "Pizza", image: "italian-pizza.png" },
-        { name: "Drinks", image: "coca-cola.png" },
+        { name: "Burgers", image: "royale-burger.png", type: Category.BURGER },
+        { name: "Salads", image: "chicken-salad.png", type: Category.SALAD },
+        { name: "Pizza", image: "italian-pizza.png", type: Category.PIZZA },
+        { name: "Drinks", image: "coca-cola.png", type: Category.DRINK },
     ];
 
-    const clickHandler = (categoryName: string) => {
-        console.log(categoryName); //category.name
-        //dispatch(selectCategory({ selectedCategory: "aaa" }));
+    const selectedCategory = useSelector(
+        (state: RootState) => state.category.value
+    );
+    
+
+    const clickHandler = (typeClicked: Category) => {
+        if (typeClicked === selectedCategory) {
+            dispatch(selectCategory(Category.ALL));
+        } else {
+            dispatch(selectCategory(typeClicked));
+        }
     };
+
 
     return (
         <div>
             <h3>Categories</h3>
             <div className="categories">
-                {categoryList.map((category) => {
+                {categoryList.map((categoryElement) => {
                     return (
                         <Card
-                            onClick={() => clickHandler(category.name)}
-                            className="category"
-                            key={category.name}
+                            onClick={() => {
+                                clickHandler(categoryElement.type);
+                            }}
+                            className={selectedCategory===categoryElement.type ? "selected" : "" }
+                            key={categoryElement.name}
                         >
-                            <Image filename={category.image} />
-                            <p>{category.name}</p>
+                            <Image filename={categoryElement.image} />
+                            <p>{categoryElement.name}</p>
                         </Card>
                     );
                 })}

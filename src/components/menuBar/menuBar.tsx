@@ -3,12 +3,13 @@ import MainMenu from "./mainMenu";
 import "./menuBar.scss";
 import Profile from "./profile";
 const Menu = () => {
+    //todo search bar filtering
     return (
         <div className="menu-bar">
-            <MainMenu />
+            <MainMenu className="menu-bar__button" />
             <input />
-            <Profile />
-            <Cart />
+            <Profile className="menu-bar__button" />
+            <Cart className="menu-bar__button" />
         </div>
     );
 };

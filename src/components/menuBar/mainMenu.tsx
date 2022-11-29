@@ -1,7 +1,12 @@
-import MenuButton from "./menuButton";
+import IconButton from "../UI/iconButton";
 
-const MainMenu = () => {
-    return <MenuButton image="button_icons/menu_button.png" />;
+const MainMenu = (props: { className?: string }) => {
+    return (
+        <IconButton
+            image="button_icons/menu_button.png"
+            className={props.className}
+        />
+    );
 };
 
 export default MainMenu;

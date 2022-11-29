@@ -1,6 +1,6 @@
 .card {
-    border-radius: 12px;
     background-color: rgb(250, 230, 200);
+    border-radius: 12px;
     border: 2px solid;
     border-color: orange;
     padding: 15px;
@@ -8,6 +8,14 @@
     height: 200px;
     text-align: center;
     justify-content: center;
+    &.selected {
+        border: 3px solid;
+        background-color: rgb(255, 196, 85);
+        border-color: orangered;
+        &:hover {
+            background-color: rgb(255, 206, 116);
+        }
+    }
     &:hover {
         box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
         background-color: rgb(255, 235, 200);

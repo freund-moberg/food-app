@@ -1,14 +1,12 @@
 import Categories from "./categories";
-import Popular from "./popular";
-import Items from "./items";
+import StoreItems from "./storeItems";
 
 const Store = () => {
     return (
         <div className="store">
             <p>Store</p>
             <Categories />
-            <Popular />
-            <Items />
+            <StoreItems />
         </div>
     );
 };

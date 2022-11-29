@@ -8,24 +8,16 @@
     column-gap: 20px;
 
     &__button {
-        display: flex;
-        border-radius: 6px;
-        box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
         background-color: orange;
-        border: none;
-        padding: 1.5rem;
         width: 40px;
         height: 40px;
-        align-items: center;
-        justify-content: center;
+        padding: 1.5rem;
         img {
             width: 20px;
             height: 25px;
         }
         &:hover {
             background-color: rgb(255, 178, 36);
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-            cursor: pointer;
         }
     }
 

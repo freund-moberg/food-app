@@ -4,7 +4,8 @@ import Store from "./components/store/store";
 import Cart from "./components/cart/cart";
 import { RootState } from "./index";
 import { useSelector } from "react-redux";
-import { toggleCart } from "./redux/cartReducer";
+
+//sfc
 
 function App() {
     const cartOpen = useSelector((state: RootState) => state.cart.value.cartOpen);

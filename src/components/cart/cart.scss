@@ -1,6 +1,26 @@
 .cart {
-    width: 500px;
+    width: 700px;
     background-color: #3c424d;
     border-radius: 12px;
     box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
+    &-item{
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+//different colors for + and -
+
+.cart-item .icon-button {
+    background-color: orange;
+    width: 40px;
+    height: 40px;
+    padding: 1.5rem;
+    img {
+        width: 20px;
+        height: 25px;
+    }
+    &:hover {
+        background-color: rgb(255, 178, 36);
+    }
 }

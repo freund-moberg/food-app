@@ -1,25 +1,27 @@
-import "./items.scss";
+import "./storeItems.scss";
 import Card from "../UI/card";
 import Image from "../UI/image";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../index";
 import { Category, CartItem } from "../../common/types";
-import { addToCart, removeFromCart } from "../../redux/cartReducer";
+import { addToCart } from "../../redux/cartReducer";
 import allItems from "../../common/products";
 
-const Items = () => {
+const StoreItems = () => {
     const dispatch = useDispatch();
 
     const selectedCategory = useSelector((state: RootState) => state.category.value);
-
-    const itemList = allItems.filter(
-        (item) => selectedCategory === Category.ALL || item.type === selectedCategory
-    );
 
     const clickHandler = (itemName: string) => {
         const clickedItem: CartItem = { name: itemName, amount: 1 };
         dispatch(addToCart(clickedItem));
     };
+
+    const itemList = allItems.filter(
+        (item) => selectedCategory === Category.ALL || item.type === selectedCategory
+    );
+
+    itemList.sort((a, b) => (a.name > b.name ? 1 : -1));
 
     return (
         <div>
@@ -43,4 +45,4 @@ const Items = () => {
     );
 };
 
-export default Items;
+export default StoreItems;

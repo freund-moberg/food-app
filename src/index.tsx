@@ -5,8 +5,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
-import categoryReducer from "./redux/category";
-import cartReducer from "./redux/cart"
+import categoryReducer from "./redux/categoryReducer";
+import cartReducer from "./redux/cartReducer"
 
 const store = configureStore({
     reducer: {

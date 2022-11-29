@@ -1,8 +1,10 @@
 import Image from "./image";
-const IconButton = (props: { className?: string; image: string }) => {
+import { AppProps } from "../../common/types";
+
+const IconButton = (props: AppProps) => {
     return (
-        <button className={props.className}>
-            <Image filename={props.image} />
+        <button className={props.className} onClick={props.onClick}>
+            <Image imageFilename={props.imageFilename} />
         </button>
     );
 };

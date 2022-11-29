@@ -1,15 +1,16 @@
-import Cart from "./cart";
-import MainMenu from "./mainMenu";
 import "./menuBar.scss";
-import Profile from "./profile";
+import CartButton from "./cartButton";
+import MainMenuButton from "./mainMenuButton";
+import ProfileButton from "./profileButton";
+
 const Menu = () => {
     //todo search bar filtering
     return (
         <div className="menu-bar">
-            <MainMenu className="menu-bar__button" />
+            <MainMenuButton className="menu-bar__button" />
             <input />
-            <Profile className="menu-bar__button" />
-            <Cart className="menu-bar__button" />
+            <ProfileButton className="menu-bar__button" />
+            <CartButton className="menu-bar__button" />
         </div>
     );
 };

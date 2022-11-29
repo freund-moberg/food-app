@@ -2,7 +2,7 @@ import "./store.scss";
 import Card from "../UI/card";
 import Image from "../UI/image";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCategory } from "../../redux/category";
+import { selectCategory } from "../../redux/categoryReducer";
 import { Category } from "../../common/types";
 import { RootState } from "../../index";
 
@@ -16,10 +16,7 @@ const Categories = () => {
         { name: "Drinks", image: "coca-cola.png", type: Category.DRINK },
     ];
 
-    const selectedCategory = useSelector(
-        (state: RootState) => state.category.value
-    );
-    
+    const selectedCategory = useSelector((state: RootState) => state.category.value);
 
     const clickHandler = (typeClicked: Category) => {
         if (typeClicked === selectedCategory) {
@@ -28,7 +25,6 @@ const Categories = () => {
             dispatch(selectCategory(typeClicked));
         }
     };
-
 
     return (
         <div>
@@ -40,10 +36,14 @@ const Categories = () => {
                             onClick={() => {
                                 clickHandler(categoryElement.type);
                             }}
-                            className={selectedCategory===categoryElement.type ? "selected" : "" }
+                            className={
+                                selectedCategory === categoryElement.type
+                                    ? "selected"
+                                    : ""
+                            }
                             key={categoryElement.name}
                         >
-                            <Image filename={categoryElement.image} />
+                            <Image imageFilename={categoryElement.image} />
                             <p>{categoryElement.name}</p>
                         </Card>
                     );

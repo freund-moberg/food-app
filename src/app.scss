@@ -9,3 +9,10 @@
     padding: 25px;
     box-sizing: border-box;
 }
+
+.display {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    width: 100%;
+}

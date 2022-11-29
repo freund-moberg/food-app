@@ -15,5 +15,15 @@ export interface CartItem {
     amount: number;
 }
 export interface CartState {
-    value: CartItem[];
+    value: {
+        cartOpen: boolean;
+        items: CartItem[];
+    }
+}
+
+export interface AppProps {
+    className?: string;
+    imageFilename?: string;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>; //function pointer
+    children?: JSX.Element | JSX.Element[];
 }

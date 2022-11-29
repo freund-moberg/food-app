@@ -1,8 +1,10 @@
-const Image = (props: { filename: string }) => {
+import { AppProps } from "../../common/types";
+
+const Image = (props: AppProps) => {
   return (
     <img
-      src={`${process.env.PUBLIC_URL}/assets/images/${props.filename}`}
-      alt={props.filename}
+      src={`${process.env.PUBLIC_URL}/assets/images/${props.imageFilename}`}
+      alt={props.imageFilename}
     />
   );
 };

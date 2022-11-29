@@ -1,10 +1,5 @@
 import "./card.scss";
-
-type AppProps = {
-    className?: string;
-    onClick?: React.MouseEventHandler<HTMLButtonElement>; //function type
-    children: JSX.Element | JSX.Element[];
-};
+import { AppProps } from "../../common/types";
 
 const Card = (props: AppProps) => {
     const classes = "card" + (props.className ? " " + props.className : "");

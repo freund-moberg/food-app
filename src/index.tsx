@@ -3,33 +3,23 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { configureStore } from "@reduxjs/toolkit";
-import { Provider } from "react-redux";
-import categoryReducer from "./redux/categoryReducer";
-import cartReducer from "./redux/cartReducer"
 
-const store = configureStore({
-    reducer: {
-        category: categoryReducer,
-        cart: cartReducer
-    },
-});
+import { Provider } from "react-redux";
+import Store from "./redux/store";
+
+
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement
 );
 root.render(
     <React.StrictMode>
-        <Provider store={store}>
+        <Provider store={Store}>
             <App />
         </Provider>
     </React.StrictMode>
 );
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof store.getState>
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
-export type AppDispatch = typeof store.dispatch
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

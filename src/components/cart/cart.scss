@@ -10,7 +10,11 @@
     position: fixed;
     right: 10px;
     top: 80px;
-    overflow-y: scroll;
+
+
+    &-items {
+        overflow-y: scroll;
+    }
 
     &-item {
         display: grid;
@@ -33,7 +37,10 @@
     }
     &-total {
         display: grid;
-        grid-template-columns: 3fr 5fr 1fr;
+        grid-template-columns: 3fr 5fr 1fr 18px;
+    }
+    h3 {
+        margin-block: 10px;
     }
 }
 

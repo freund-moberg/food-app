@@ -4,7 +4,7 @@ import Image from "../UI/image";
 import { useSelector, useDispatch } from "react-redux";
 import { selectCategory } from "../../redux/categoryReducer";
 import { Category } from "../../common/types";
-import { RootState } from "../../index";
+import { RootState } from "../../redux/store";
 
 const Categories = () => {
     const dispatch = useDispatch();
@@ -17,7 +17,7 @@ const Categories = () => {
         { name: "Desert", image: "ice-cream.png", type: Category.DESERT },
     ];
 
-    const selectedCategory = useSelector((state: RootState) => state.category.value);
+    const selectedCategory = useSelector((state: RootState) => state.category.selected);
 
     const clickHandler = (typeClicked: Category) => {
         if (typeClicked === selectedCategory) {

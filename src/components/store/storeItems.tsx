@@ -2,7 +2,7 @@ import "./store.scss";
 import Card from "../UI/card";
 import Image from "../UI/image";
 import { useSelector, useDispatch } from "react-redux";
-import { RootState } from "../../index";
+import { RootState } from "../../redux/store";
 import { Category, CartItem } from "../../common/types";
 import { addToCart } from "../../redux/cartReducer";
 import allItems from "../../common/products";
@@ -10,10 +10,10 @@ import allItems from "../../common/products";
 const StoreItems = () => {
     const dispatch = useDispatch();
 
-    const selectedCategory = useSelector((state: RootState) => state.category.value);
+    const selectedCategory = useSelector((state: RootState) => state.category.selected);
 
-    const clickHandler = (itemName: string) => {
-        const clickedItem: CartItem = { name: itemName, amount: 1 };
+    const clickHandler = (itemName: string, itemPrice: number) => {
+        const clickedItem: CartItem = { name: itemName, amount: 1, price: itemPrice};
         dispatch(addToCart(clickedItem));
     };
 
@@ -32,7 +32,7 @@ const StoreItems = () => {
                         <Card
                             key={item.name}
                             onClick={() => {
-                                clickHandler(item.name);
+                                clickHandler(item.name, item.price);
                             }}
                         >
                             <Image imageFilename={item.image} />

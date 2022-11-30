@@ -4,22 +4,21 @@ export enum Category {
     SALAD,
     PIZZA,
     DRINK,
-    DESERT
+    DESERT,
 }
 
 export interface CategoryState {
-    value: Category;
+    selected: Category;
 }
 
 export interface CartItem {
     name: string;
     amount: number;
+    price: number;
 }
 export interface CartState {
-    value: {
-        cartOpen: boolean;
-        items: CartItem[];
-    }
+    cartOpen: boolean;
+    items: CartItem[];
 }
 
 export interface AppProps {

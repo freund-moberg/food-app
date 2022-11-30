@@ -1,14 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { Category, CategoryState } from "../common/types";
 
-const initialState: CategoryState = { value: Category.ALL };
+const initialState: CategoryState = { selected: Category.ALL };
 
 export const categorySlice = createSlice({
     name: "category",
     initialState: initialState,
     reducers: {
         selectCategory: (state, action) => {
-            state.value = action.payload;
+            state.selected = action.payload;
         },
     },
 });

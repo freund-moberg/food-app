@@ -2,13 +2,13 @@ import "./app.scss";
 import MenuBar from "./components/menuBar/menuBar";
 import Store from "./components/store/store";
 import Cart from "./components/cart/cart";
-import { RootState } from "./index";
+import { RootState } from "./redux/store"
 import { useSelector } from "react-redux";
 
 //sfc
 
 function App() {
-    const cartOpen = useSelector((state: RootState) => state.cart.value.cartOpen);
+    const cartOpen = useSelector((state: RootState) => state.cart.cartOpen);
 
     return (
         <div className="App">

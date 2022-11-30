@@ -1,7 +1,7 @@
 import "./menuBar.scss";
-import CartButton from "./cartButton";
-import MainMenuButton from "./mainMenuButton";
-import ProfileButton from "./profileButton";
+import CartButton from "./buttons/cartButton";
+import MainMenuButton from "./buttons/mainMenuButton";
+import ProfileButton from "./buttons/profileButton";
 
 const Menu = () => {
     //todo search bar filtering

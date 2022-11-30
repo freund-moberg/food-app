@@ -14,6 +14,7 @@ const Categories = () => {
         { name: "Salads", image: "chicken-salad.png", type: Category.SALAD },
         { name: "Pizza", image: "italian-pizza.png", type: Category.PIZZA },
         { name: "Drinks", image: "coca-cola.png", type: Category.DRINK },
+        { name: "Desert", image: "ice-cream.png", type: Category.DESERT },
     ];
 
     const selectedCategory = useSelector((state: RootState) => state.category.value);
@@ -29,7 +30,7 @@ const Categories = () => {
     return (
         <div>
             <h3>Categories</h3>
-            <div className="categories">
+            <div className="store-cards">
                 {categoryList.map((categoryElement) => {
                     return (
                         <Card

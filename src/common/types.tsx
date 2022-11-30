@@ -4,6 +4,7 @@ export enum Category {
     SALAD,
     PIZZA,
     DRINK,
+    DESERT
 }
 
 export interface CategoryState {
@@ -22,6 +23,9 @@ export interface CartState {
 }
 
 export interface AppProps {
+    name?: string;
+    key?: string;
+    amount?: number;
     className?: string;
     imageFilename?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>; //function pointer

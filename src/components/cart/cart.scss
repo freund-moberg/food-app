@@ -3,24 +3,42 @@
     background-color: #3c424d;
     border-radius: 12px;
     box-shadow: -10px 10px 15px rgba(0, 0, 0, 0.5);
-    &-item{
+    padding: 20px;
+    &-item {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        &__button {
+            width: 40px;
+            height: 40px;
+            padding: 1.5rem;
+            img {
+                width: 20px;
+                height: 25px;
+            }
+
+        }
+        &__name {
+            width: 250px;
+        }
+    }
+    &-total {
+        width: 420px;
+    }
+}
+
+.minus_button {
+    background-color: rgb(223, 90, 23);
+    &:hover {
+        background-color: orangered;
+    }
+}
+.plus_button {
+    background-color: rgb(152, 199, 35);
+    &:hover {
+        background-color: rgb(170, 223, 35);
     }
 }
 
 //different colors for + and -
-
-.cart-item .icon-button {
-    background-color: orange;
-    width: 40px;
-    height: 40px;
-    padding: 1.5rem;
-    img {
-        width: 20px;
-        height: 25px;
-    }
-    &:hover {
-        background-color: rgb(255, 178, 36);
-    }
-}

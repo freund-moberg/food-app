@@ -1,4 +1,4 @@
-import "./storeItems.scss";
+import "./store.scss";
 import Card from "../UI/card";
 import Image from "../UI/image";
 import { useSelector, useDispatch } from "react-redux";
@@ -26,7 +26,7 @@ const StoreItems = () => {
     return (
         <div>
             <h3>Items</h3>
-            <div className="items">
+            <div className="store-cards">
                 {itemList.map((item) => {
                     return (
                         <Card

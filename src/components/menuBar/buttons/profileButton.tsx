@@ -1,5 +1,5 @@
-import IconButton from "../UI/iconButton";
-import { AppProps } from "../../common/types";
+import IconButton from "../../UI/iconButton";
+import { AppProps } from "../../../common/types";
 
 const ProfileButton = (props: AppProps) => {
     return (

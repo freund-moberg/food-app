@@ -16,6 +16,9 @@ const products = [
     { name: "Coca-Cola", image: "coca-cola.png", type: Category.DRINK },
     { name: "Fanta", image: "fanta.png", type: Category.DRINK },
     { name: "Sprite", image: "sprite.png", type: Category.DRINK },
+    { name: "Ice Cream", image: "ice-cream.png", type: Category.DESERT },
+    { name: "Pancakes", image: "pancakes.png", type: Category.DESERT },
+
 ];
 
 export default products;

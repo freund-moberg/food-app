@@ -12,15 +12,19 @@ const StoreItems = () => {
 
     const selectedCategory = useSelector((state: RootState) => state.category.selected);
 
+    const searchQuery = useSelector((state: RootState) => state.search.value);
+
     const clickHandler = (itemName: string, itemPrice: number) => {
-        const clickedItem: CartItem = { name: itemName, amount: 1, price: itemPrice};
+        const clickedItem: CartItem = { name: itemName, amount: 1, price: itemPrice };
         dispatch(addToCart(clickedItem));
     };
 
     const itemList = allItems.filter(
-        (item) => selectedCategory === Category.ALL || item.type === selectedCategory
+        (item) =>
+            (selectedCategory === Category.ALL || item.type === selectedCategory) &&
+            (searchQuery === "" ||
+                item.name.toLowerCase().includes(searchQuery.toLowerCase()))
     );
-
     itemList.sort((a, b) => (a.name > b.name ? 1 : -1));
 
     return (

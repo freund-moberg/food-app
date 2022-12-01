@@ -16,6 +16,14 @@ export interface CartItem {
     amount: number;
     price: number;
 }
+
+export interface Item {
+    name: string;
+    amount: number;
+    price: number;
+    image: string;
+}
+
 export interface CartState {
     cartOpen: boolean;
     items: CartItem[];

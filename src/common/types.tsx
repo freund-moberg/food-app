@@ -7,6 +7,11 @@ export enum Category {
     DESERT,
 }
 
+export enum Tabs{
+    STORE,
+    PROFILE
+}
+
 export interface CategoryState {
     selected: Category;
 }

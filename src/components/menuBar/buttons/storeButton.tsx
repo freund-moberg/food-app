@@ -4,19 +4,20 @@ import { useDispatch } from "react-redux";
 import { setTab } from "../../../redux/tabReducer";
 import { Tabs } from "../../../common/types"
 
-const ProfileButton = (props: AppProps) => {
+const StoreButton = (props: AppProps) => {
     const dispatch = useDispatch();
 
     const clickHandler = () => {
-        dispatch(setTab(Tabs.PROFILE));
+        dispatch(setTab(Tabs.STORE));
     };
+
     return (
         <IconButton
-            imageFilename="button_icons/profile_button.png"
+            imageFilename="button_icons/menu_button.png"
             className={props.className}
             onClick={() => clickHandler()}
         />
     );
 };
 
-export default ProfileButton;
+export default StoreButton;

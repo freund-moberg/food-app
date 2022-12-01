@@ -1,12 +1,22 @@
 import Image from "../UI/image";
+import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updateQuery } from "../../redux/searchReducer";
 import { RootState } from "../../redux/store";
 import allItems from "../../common/products";
 
-
 const Popular = () => {
     const dispatch = useDispatch();
+
+    const getMultipleRandom = (arr: Array<any>, num: number) => {
+        const shuffled = [...arr].sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, num);
+    };
+
+    //const [popularItems] = useState(getMultipleRandom(allItems, 2));
+    const popularItems = useMemo(() => {
+        return getMultipleRandom(allItems, 2);
+    }, [])
 
     const searchQuery = useSelector((state: RootState) => state.search.value);
 
@@ -15,19 +25,6 @@ const Popular = () => {
             ? dispatch(updateQuery(""))
             : dispatch(updateQuery(itemName));
     };
-
-    /*
-    const getMultipleRandom = (arr: Array<any>, num: number) => {
-        const shuffled = [...arr].sort(() => 0.5 - Math.random());
-        return shuffled.slice(0, num);
-    };
-    const popularItems = getMultipleRandom(allItems, 2);
-    */
-
-    const popularItems = [allItems[15],allItems[12]];//
-
-    console.log(popularItems);
-
 
     return (
         <div>

@@ -1,0 +1,25 @@
+.profile {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    p {
+        color:rgb(210, 210, 210);
+    }
+}
+
+.info-block {
+    p { 
+        &:nth-child(1) {
+            color:rgb(210, 210, 210);
+            margin-block: 0px;    
+        }
+        &:nth-child(2) {
+            font-family: "Lucida Console", "Courier New", monospace;
+            color:rgb(151, 151, 151);
+            margin-top: 10px;
+            padding-inline: 15px;
+            font-size: 80%;
+            text-transform: uppercase;
+        }
+    }
+}

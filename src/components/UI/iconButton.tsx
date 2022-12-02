@@ -1,6 +1,6 @@
 import "./iconButton.scss"
 import Image from "./image";
-import { AppProps } from "../../common/types";
+import { AppProps } from "common/types";
 
 const IconButton = (props: AppProps) => {
     const classes = "icon-button" + (props.className ? " " + props.className : "");

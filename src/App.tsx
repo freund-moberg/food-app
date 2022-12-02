@@ -1,11 +1,11 @@
-import "./app.scss";
-import MenuBar from "./components/menuBar/menuBar";
-import Store from "./components/store/store";
-import Cart from "./components/cart/cart";
-import { RootState } from "./redux/store";
+import "app.scss";
+import MenuBar from "components/menuBar/menuBar";
+import Store from "components/store/store";
+import Cart from "components/cart/cart";
+import { RootState } from "redux/store";
 import { useSelector } from "react-redux";
-import { Tabs } from "./common/types"
-import Profile from "./components/profile/profile";
+import { Tabs } from "common/types"
+import Profile from "components/profile/profile";
 
 //sfc
 

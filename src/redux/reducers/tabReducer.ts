@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Tabs } from "../../common/types";
+import { Tabs } from "common/types";
 
 const initialState = { displayedTab: Tabs.STORE };
 

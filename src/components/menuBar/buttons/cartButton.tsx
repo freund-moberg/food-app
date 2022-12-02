@@ -1,6 +1,6 @@
-import IconButton from "../../UI/iconButton";
-import { AppProps } from "../../../common/types";
-import { toggleCart } from "../../../redux/reducers/cartReducer";
+import IconButton from "components/UI/iconButton";
+import { AppProps } from "common/types";
+import { toggleCart } from "redux/reducers/cartReducer";
 import { useDispatch } from "react-redux";
 
 const CartButton = (props: AppProps) => {

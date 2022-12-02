@@ -1,10 +1,10 @@
 import "./store.scss";
-import Card from "../UI/card";
-import Image from "../UI/image";
+import Card from "components/UI/card";
+import Image from "components/UI/image";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCategory } from "../../redux/reducers/categoryReducer";
-import { Category } from "../../common/types";
-import { RootState } from "../../redux/store";
+import { selectCategory } from "redux/reducers/categoryReducer";
+import { Category } from "common/types";
+import { RootState } from "redux/store";
 
 const Categories = () => {
     const dispatch = useDispatch();

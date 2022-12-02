@@ -1,9 +1,9 @@
-import Image from "../UI/image";
+import Image from "components/UI/image";
 import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateQuery } from "../../redux/reducers/searchReducer";
-import { RootState } from "../../redux/store";
-import allItems from "../../common/products";
+import { updateQuery } from "redux/reducers/searchReducer";
+import { RootState } from "redux/store";
+import allItems from "common/products";
 
 const Popular = () => {
     const dispatch = useDispatch();

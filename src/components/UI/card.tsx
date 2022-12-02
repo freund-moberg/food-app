@@ -1,5 +1,5 @@
 import "./card.scss";
-import { AppProps } from "../../common/types";
+import { AppProps } from "common/types";
 
 const Card = (props: AppProps) => {
     const classes = "card" + (props.className ? " " + props.className : "");

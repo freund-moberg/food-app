@@ -1,9 +1,9 @@
 import "./cart.scss";
 import { useDispatch } from "react-redux";
-import { addToCart, removeFromCart } from "../../redux/reducers/cartReducer";
+import { addToCart, removeFromCart } from "redux/reducers/cartReducer";
 import IconButton from "../UI/iconButton";
 import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
+import { RootState } from "redux/store";
 
 const Cart = () => {
     const dispatch = useDispatch();

@@ -1,4 +1,4 @@
-import { AppProps } from "../../common/types";
+import { AppProps } from "common/types";
 
 const Image = (props: AppProps) => {
   return (

@@ -1,4 +1,4 @@
-import { CartItem, Category } from "../common/types";
+import { CartItem, Category } from "common/types";
 
 export interface CartState {
     cartOpen: boolean;

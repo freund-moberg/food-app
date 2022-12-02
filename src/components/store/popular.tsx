@@ -1,7 +1,7 @@
 import Image from "../UI/image";
 import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateQuery } from "../../redux/searchReducer";
+import { updateQuery } from "../../redux/reducers/searchReducer";
 import { RootState } from "../../redux/store";
 import allItems from "../../common/products";
 

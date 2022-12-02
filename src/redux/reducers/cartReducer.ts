@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CartState } from "../common/types";
+import { CartState } from "../../common/types";
 
 const initialState: CartState = { cartOpen: false, items: []  };
 

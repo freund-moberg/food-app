@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import categoryReducer from "./categoryReducer";
-import cartReducer from "./cartReducer"
-import searchReducer from "./searchReducer";
-import tabReducer from "./tabReducer";
+import categoryReducer from "./reducers/categoryReducer";
+import cartReducer from "./reducers/cartReducer"
+import searchReducer from "./reducers/searchReducer";
+import tabReducer from "./reducers/tabReducer";
 
 const Store = configureStore({
     reducer: {

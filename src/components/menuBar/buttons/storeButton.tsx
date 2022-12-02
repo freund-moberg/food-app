@@ -1,7 +1,7 @@
 import IconButton from "../../UI/iconButton";
 import { AppProps } from "../../../common/types";
 import { useDispatch } from "react-redux";
-import { setTab } from "../../../redux/tabReducer";
+import { setTab } from "../../../redux/reducers/tabReducer";
 import { Tabs } from "../../../common/types"
 
 const StoreButton = (props: AppProps) => {

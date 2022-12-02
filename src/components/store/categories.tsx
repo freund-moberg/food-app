@@ -2,7 +2,7 @@ import "./store.scss";
 import Card from "../UI/card";
 import Image from "../UI/image";
 import { useSelector, useDispatch } from "react-redux";
-import { selectCategory } from "../../redux/categoryReducer";
+import { selectCategory } from "../../redux/reducers/categoryReducer";
 import { Category } from "../../common/types";
 import { RootState } from "../../redux/store";
 

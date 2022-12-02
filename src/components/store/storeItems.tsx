@@ -4,7 +4,7 @@ import Image from "../UI/image";
 import { useSelector, useDispatch } from "react-redux";
 import { RootState } from "../../redux/store";
 import { Category, CartItem } from "../../common/types";
-import { addToCart } from "../../redux/cartReducer";
+import { addToCart } from "../../redux/reducers/cartReducer";
 import allItems from "../../common/products";
 
 const StoreItems = () => {

@@ -9,7 +9,7 @@ export enum Category {
 
 export enum Tabs{
     STORE,
-    PROFILE
+    asd
 }
 
 export interface CategoryState {

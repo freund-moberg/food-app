@@ -17,7 +17,7 @@ function App() {
         switch(displayedTab){
             case Tabs.STORE:
                 return <Store />
-            case Tabs.PROFILE:
+            case Tabs.asd:
                 return <Profile />
         }
     }

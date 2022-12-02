@@ -1,4 +1,4 @@
-import { updateQuery } from "../../redux/searchReducer";
+import { updateQuery } from "../../redux/reducers/searchReducer";
 import { useDispatch } from "react-redux";
 
 const SearchBar = () => {

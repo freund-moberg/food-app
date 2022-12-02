@@ -7,13 +7,9 @@ export enum Category {
     DESERT,
 }
 
-export enum Tabs{
+export enum Tabs {
     STORE,
-    asd
-}
-
-export interface CategoryState {
-    selected: Category;
+    PROFILE,
 }
 
 export interface CartItem {
@@ -27,11 +23,6 @@ export interface Item {
     amount: number;
     price: number;
     image: string;
-}
-
-export interface CartState {
-    cartOpen: boolean;
-    items: CartItem[];
 }
 
 export interface AppProps {

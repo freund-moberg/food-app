@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { Category, CategoryState } from "../../common/types";
+import { Category } from "../../common/types";
+import { CategoryState } from "../stateModels";
 
 const initialState: CategoryState = { selected: Category.ALL };
 

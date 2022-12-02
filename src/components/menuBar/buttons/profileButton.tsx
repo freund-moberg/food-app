@@ -1,14 +1,13 @@
 import IconButton from "../../UI/iconButton";
-import { AppProps } from "../../../common/types";
+import { AppProps,Tabs } from "../../../common/types";
 import { useDispatch } from "react-redux";
 import { setTab } from "../../../redux/reducers/tabReducer";
-import { Tabs } from "../../../common/types"
 
 const ProfileButton = (props: AppProps) => {
     const dispatch = useDispatch();
 
     const clickHandler = () => {
-        dispatch(setTab(Tabs.asd));
+        dispatch(setTab(Tabs.PROFILE));
     };
     return (
         <IconButton

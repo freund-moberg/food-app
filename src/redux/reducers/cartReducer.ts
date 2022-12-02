@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { CartState } from "../../common/types";
+import { CartState } from "../stateModels";
 
 const initialState: CartState = { cartOpen: false, items: []  };
 
@@ -17,7 +17,7 @@ export const cartSlice = createSlice({
             state.items
                 .filter((item) => item.name === action.payload.name)
                 .forEach((item) => item.amount--);
-            state.items = state.items.filter((item) => item.amount !== 0);
+            state.items = state.items.filter((item) => item.amount > 0);
         },
         toggleCart: (state) => {
             state.cartOpen = !state.cartOpen;

@@ -27,7 +27,7 @@ const Cart = () => {
             <div className="cart-items">
             {cartItemList.map((cartItem) => {
                 return (
-                    <div className="cart-item">
+                    <div className="cart-item" key={cartItem.name}>
                         <p>{cartItem.amount}x</p>
                         <IconButton
                             imageFilename="button_icons/minus_button.png"

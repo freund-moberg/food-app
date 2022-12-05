@@ -7,11 +7,6 @@ export enum Category {
     DESERT,
 }
 
-export enum Tabs {
-    STORE,
-    PROFILE,
-}
-
 export interface CartItem {
     name: string;
     amount: number;

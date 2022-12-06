@@ -28,18 +28,12 @@ const ProfileInfo = () => {
         dispatch(logout());
     };
 
-    const settingsClickHandler = () => {
-        //TODO
-        console.log("settings");
-    };
-
     return (
         <div>
             <div className="button_bar">
                 <Link to="settings">
                     <IconButton
                         imageFilename="button_icons/settings_button.png"
-                        onClick={settingsClickHandler}
                         className="button_bar__settings"
                     />
                 </Link>

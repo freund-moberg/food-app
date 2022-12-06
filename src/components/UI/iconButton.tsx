@@ -5,7 +5,7 @@ import { AppProps } from "common/types";
 const IconButton = (props: AppProps) => {
     const classes = "icon-button" + (props.className ? " " + props.className : "");
     return (
-        <button className={classes} onClick={props.onClick}>
+        <button className={classes} onClick={props.onClick} type={props.buttonType}>
             <Image imageFilename={props.imageFilename} />
         </button>
     );

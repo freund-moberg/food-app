@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { searchState } from "../stateModels";
+import { SearchState } from "../stateModels";
 
-const initialState: searchState = { value: "" };
+const initialState: SearchState = { value: "" };
 
 export const searchSlice = createSlice({
     name: "search",

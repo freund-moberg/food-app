@@ -50,6 +50,7 @@ const Cart = () => {
                 <div></div>
                 <h4>{calculateTotalPrice()}€</h4>
             </div>
+            <div>TODO Login to buy</div>
         </div>
     );
 };

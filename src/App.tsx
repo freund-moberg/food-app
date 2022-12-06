@@ -26,6 +26,7 @@ function App() {
                         <Route path="settings" element={<h1>settings</h1>} />
                     </Route>
                 </Routes>
+
                 {cartOpen ? <Cart /> : null}
             </div>
         </div>

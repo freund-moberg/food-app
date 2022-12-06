@@ -1,4 +1,4 @@
-import { CartItem, Category } from "common/types";
+import { Account, CartItem, Category } from "common/types";
 
 export interface CartState {
     cartOpen: boolean;
@@ -9,6 +9,11 @@ export interface CategoryState {
     selected: Category;
 }
 
-export interface searchState {
+export interface SearchState {
     value: string;
+}
+
+export interface AccountState {
+    loggedIn: boolean;
+    current: Account;
 }

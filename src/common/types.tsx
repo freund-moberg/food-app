@@ -21,11 +21,20 @@ export interface Item {
 }
 
 export interface AppProps {
+    className?: string;
     name?: string;
     key?: string;
     amount?: number;
-    className?: string;
+    buttonType?: "button" | "submit" | "reset" | undefined;
     imageFilename?: string;
     onClick?: React.MouseEventHandler<HTMLButtonElement>; //function pointer
     children?: JSX.Element | JSX.Element[];
+}
+
+export interface Account {
+    firstName: string;
+    lastName: string;
+    email: string;
+    address: string;
+    creditCard: string;
 }

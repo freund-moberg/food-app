@@ -2,12 +2,14 @@ import { configureStore } from "@reduxjs/toolkit";
 import categoryReducer from "./reducers/categoryReducer";
 import cartReducer from "./reducers/cartReducer"
 import searchReducer from "./reducers/searchReducer";
+import accountReducer from "./reducers/accountReducer";
 
 const Store = configureStore({
     reducer: {
         category: categoryReducer,
         cart: cartReducer,
         search: searchReducer,
+        account: accountReducer
     },
 });
 

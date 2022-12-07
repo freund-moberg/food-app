@@ -11,7 +11,6 @@
     right: 10px;
     top: 80px;
 
-
     &-items {
         overflow-y: scroll;
     }
@@ -29,30 +28,51 @@
                 width: 20px;
                 height: 25px;
             }
+            &.minus_button {
+                background-color: rgb(223, 90, 23);
+                &:hover {
+                    background-color: rgb(255, 69, 0);
+                }
+            }
+            &.plus_button {
+                background-color: rgb(152, 199, 35);
+                &:hover {
+                    background-color: rgb(170, 223, 35);
+                }
+            }
         }
         &__name {
             width: 250px;
         }
-        
     }
     &-total {
         display: grid;
-        grid-template-columns: 3fr 5fr 1fr 18px;
+        grid-template-columns: 1fr 3fr 4fr 1fr 18px;
+        align-items: center;
+
+        button {
+            width: 40px;
+            height: 40px;
+            padding: 1.5rem;
+            img {
+                width: 20px;
+                height: 25px;
+            }
+        }
+        &__buy {
+            background-color: orange;
+            &:hover {
+                background-color: rgb(255, 178, 36);
+            }
+        }
+        &__login {
+            background-color: rgb(223, 90, 23);
+            &:hover {
+                background-color: rgb(255, 69, 0);
+            }
+        }
     }
     h3 {
         margin-block: 10px;
-    }
-}
-
-.minus_button {
-    background-color: rgb(223, 90, 23);
-    &:hover {
-        background-color: rgb(255, 69, 0);
-    }
-}
-.plus_button {
-    background-color: rgb(152, 199, 35);
-    &:hover {
-        background-color: rgb(170, 223, 35);
     }
 }

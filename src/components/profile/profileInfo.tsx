@@ -9,11 +9,11 @@ import { logout } from "redux/reducers/accountReducer";
 
 const ProfileInfo = () => {
     const dispatch = useDispatch();
-    const account = useSelector((state: RootState) => state.account);
     const navigate = useNavigate();
+    const account = useSelector((state: RootState) => state.account);
 
     const censor = (value: string) => {
-        return value.substring(0, 4) + " ****".repeat(3);
+        return account.settings.showCC ? value : value.substring(0, 4) + " ****".repeat(3);
     };
 
     useEffect(() => {

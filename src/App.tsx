@@ -11,7 +11,7 @@ import Login from "components/profile/login";
 import Settings from "components/profile/settings";
 import { useState, useEffect } from "react";
 import Modal from "components/UI/modal";
-import { ModalType } from "common/types";
+
 
 //sfc
 

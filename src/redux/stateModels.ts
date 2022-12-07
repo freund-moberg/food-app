@@ -1,4 +1,4 @@
-import { Account, CartItem, Category } from "common/types";
+import { Account, CartItem, Category, Settings } from "common/types";
 
 export interface CartState {
     cartOpen: boolean;
@@ -16,4 +16,5 @@ export interface SearchState {
 export interface AccountState {
     loggedIn: boolean;
     current: Account;
+    settings: Settings;
 }

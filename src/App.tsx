@@ -9,7 +9,7 @@ import { Route, Routes } from "react-router-dom";
 import Profile from "components/profile/profile";
 import Login from "components/profile/login";
 import Settings from "components/profile/settings";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from "components/UI/modal";
 import { ModalType } from "common/types";
 
@@ -17,6 +17,14 @@ import { ModalType } from "common/types";
 
 function App() {
     const cartOpen = useSelector((state: RootState) => state.cart.cartOpen);
+    const darkTheme = useSelector((state: RootState) => state.account.settings.darkTheme);
+
+    useEffect(() => {
+        const root = document.documentElement;
+        root?.style.setProperty("--primary-color", darkTheme ? "#282c34" : "#bdbdbd");
+        root?.style.setProperty("--text-color", darkTheme ? "white" : "#282c34");
+        root?.style.setProperty("--secondary-color", darkTheme ? "#3c424d" : "#888888");
+    }, [darkTheme]);
 
     //change to reducer
     const [modal, setModal] = useState({

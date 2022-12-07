@@ -93,7 +93,7 @@
 }
 
 .settings {
-    width: 30%;
+    width: 500px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 15px;
@@ -163,6 +163,19 @@
             &:before {
                 border-radius: 50%;
             }
+        }
+    }
+    button {
+        background-color: orange;
+        width: 40px;
+        height: 40px;
+        padding: 1.5rem;
+        img {
+            width: 30px;
+            height: 40px;
+        }
+        &:hover {
+            background-color: rgb(255, 178, 36);
         }
     }
 }

@@ -1,5 +1,7 @@
+
+@import "app";
 .menu-bar {
-    background-color: #282c34;
+    background-color: var(--primary-color);
     text-align: center;
     display: flex;
     flex-direction: row;

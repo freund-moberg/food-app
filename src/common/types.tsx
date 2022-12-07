@@ -47,3 +47,8 @@ export interface ModalType {
     title: string;
     message: string;
 }
+
+export interface Settings {
+    darkTheme: boolean,
+    showCC: boolean
+}
